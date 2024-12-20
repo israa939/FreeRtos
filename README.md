@@ -88,8 +88,7 @@ This project includes six tasks that work together to perform the following func
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/FreeRTOS-STM32-LCD-Potentiometer.git
-    cd FreeRTOS-STM32-LCD-Potentiometer
+    git clone https://github.com/israa939/FreeRtos/edit/main/README.md
     ```
 
 2. **Open the project in STM32CubeIDE**:
