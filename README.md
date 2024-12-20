@@ -88,7 +88,7 @@ This project includes six tasks that work together to perform the following func
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/israa939/FreeRtos/edit/main/README.md
+    git clone https://github.com/israa939/FreeRtos
     ```
 
 2. **Open the project in STM32CubeIDE**:
