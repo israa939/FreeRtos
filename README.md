@@ -76,7 +76,7 @@ This project includes six tasks that work together to perform the following func
 ### Prerequisites
 
 - STM32 development board (e.g., STM32F4 or STM32L4 series).
-- **STM32CubeMX**: For peripheral configuration (I2C, ADC, GPIO, etc.).
+- **STM32CubeMX**: For peripheral configuration (I2C, ADC, GPIO ).
 - **STM32CubeIDE**: To write, compile, and flash the firmware.
 - **FreeRTOS**: Integrated with STM32CubeIDE for task scheduling and management.
 - **I2C LCD Display**: For output.
@@ -86,44 +86,26 @@ This project includes six tasks that work together to perform the following func
 
 ### Steps to Run
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/israa939/FreeRtos
-    ```
+1. **Download the project**  
+   - Click on **Code > Download ZIP** from this repository.  
+   - Extract the ZIP file to your local machine.  
 
-2. **Open the project in STM32CubeIDE**:
-    - Open STM32CubeIDE and import the project.
+2. **Open the project in STM32CubeIDE**  
+   - Launch STM32CubeIDE.  
+   - Go to **File > Open Projects from File System** and select the extracted folder.  
 
-3. **Configure the peripherals**:
-    - Use STM32CubeMX to configure the peripherals:
-        - Set up **I2C** for LCD communication.
-        - Configure **ADC** for the potentiometer input.
-        - Enable **EXTI** for the PA0 and PA2 buttons.
-        - Configure **GPIO** for the LEDs.
+3. **Check the configurations**  
+   - Open the `.ioc` file to view the peripheral configurations (I2C, ADC, EXTI, GPIO).  
 
-4. **Write the code**:
-    - Implement the task logic as per the description in the README.
-    - Use **binary semaphores**, **queues**, and **mutexes** to synchronize the tasks.
+4. **Build the project**  
+   - Click on **Build** in STM32CubeIDE to compile the project.  
 
-5. **Build the project**:
-    - Click on **Build** in STM32CubeIDE to compile the project.
-
-6. **Flash the firmware**:
-    - Connect your STM32 board via ST-Link or other programming tools.
-    - Click **Run** or **Debug** in STM32CubeIDE to flash the firmware to your device.
-
-7. **Test the system**:
-    - Upon powering the device, the **Blue LED Task** will toggle to show that the system has started.
-    - Press **PA0** to trigger the green LED task via EXTI interrupt.
-    - The ADC will convert the potentiometer value and display it on the LCD.
-    - If **PA2** is pressed, "Urgence" will be shown on the LCD.
+5. **Debug and Run**  
+   - Connect your STM32 board via ST-Link (or another programmer).  
+   - Click **Debug/Run** in STM32CubeIDE to flash and run the project.  
 
 ---
 
 ## Conclusion
 
 This project demonstrates how FreeRTOS can be used to manage multiple tasks, synchronize them using binary semaphores and mutexes, and communicate between tasks using queues. It highlights the importance of task coordination, resource management, and inter-task communication in real-time embedded systems.
-
----
-
-Let me know if you need further adjustments!
